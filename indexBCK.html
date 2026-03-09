@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidatos Plancha 3 - El Dorado Country Club</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+       header {
+    width: 100%;
+    height: 450px; /* Ajusta la altura según prefieras */
+    background-image: url('Banner3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Coloca el botón en la parte inferior */
+    align-items: flex-end;    /* Alinea el botón a la derecha */
+    padding: 0 40px 40px 0;   /* Espaciado para el botón */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Ocultamos el texto del HTML porque ya está incluido en la imagen */
+header h1, header p {
+    display: none;
+}
+
+.header-content {
+    max-width: 55%; /* Limita el ancho del texto para que no choque con el logo */
+}
+        .btn-container {
+            margin-top: 25px;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #1a3a5a;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 1.1em;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .btn-download:hover {
+            background-color: #e6b800;
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .name {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+            color: #1a3a5a;
+        }
+        .position {
+            font-size: 0.85em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        /* Nueva sección para el QR de Instagram */
+        .instagram-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .qr-img {
+            width: 200px;
+            height: auto;
+            margin-top: 15px;
+            border: 5px solid #1a3a5a;
+            border-radius: 15px;
+        }
+        .insta-handle {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #E1306C; /* Color Instagram */
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="btn-container">
+        <a href="propuesta-gestion.pdf" class="btn-download" download>
+            📄 Descargar Propuesta de Gestión
+        </a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="card">
+        <img src="Yencer.jpg" alt="Yencer Perez">
+        <div class="card-content">
+            <div class="name">Yencer Perez</div>
+            <div class="position">Presidente</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Luis.jpg" alt="Luis Mejias">
+        <div class="card-content">
+            <div class="name">Luis Mejias</div>
+            <div class="position">Vicepresidente</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Logo2.png" alt="Ernesto Lozada">
+        <div class="card-content">
+            <div class="name">Ernesto Lozada</div>
+            <div class="position">Secretario</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Logo2.png" alt="Juan Morales">
+        <div class="card-content">
+            <div class="name">Juan Morales</div>
+            <div class="position">Tesorero</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Logo2.png" alt="Ismael Martinez">
+        <div class="card-content">
+            <div class="name">Ismael Martinez</div>
+            <div class="position">1er Vocal Principal</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Yonys.jpg" alt="Yonys Luna">
+        <div class="card-content">
+            <div class="name">Yonys Luna</div>
+            <div class="position">2do Vocal Principal</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Jose.jpg" alt="Jose Ornelas">
+        <div class="card-content">
+            <div class="name">Jose Ornelas</div>
+            <div class="position">3er Vocal Principal</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Omar.jpg" alt="Omar Gimon">
+        <div class="card-content">
+            <div class="name">Omar Gimon</div>
+            <div class="position">4to Vocal Principal</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Mariantonieta.jpg" alt="Mariantonieta Rossi">
+        <div class="card-content">
+            <div class="name">Mariantonieta Rossi</div>
+            <div class="position">5to Vocal Principal</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Logo2.png" alt="Humberto Herrera">
+        <div class="card-content">
+            <div class="name">Humberto Herrera</div>
+            <div class="position">Comisario</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Logo2.png" alt="Oswaldo Jimenez">
+        <div class="card-content">
+            <div class="name">Oswaldo Jimenez</div>
+            <div class="position">Sub Comisario</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Yonaluin.jpg" alt="Yonaluin Mejias">
+        <div class="card-content">
+            <div class="name">Yonaluin Mejias</div>
+            <div class="position">1er Vocal Suplente</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Leisy.jpg" alt="Leisy Hurtado">
+        <div class="card-content">
+            <div class="name">Leisy Hurtado</div>
+            <div class="position">2do Vocal Suplente</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Nelson.jpg" alt="Nelson Trejo">
+        <div class="card-content">
+            <div class="name">Nelson Trejo</div>
+            <div class="position">3er Vocal Suplente</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Logo2.png" alt="Jhonny Osta">
+        <div class="card-content">
+            <div class="name">Jhonny Osta</div>
+            <div class="position">4to Vocal Suplente</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Carlos.jpg" alt="Carlos Quintana">
+        <div class="card-content">
+            <div class="name">Carlos Quintana</div>
+            <div class="position">5to Vocal Suplente</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Logo2.png" alt="Deivis Barrios">
+        <div class="card-content">
+            <div class="name">Deivis Barrios</div>
+            <div class="position">6to Vocal Suplente</div>
+        </div>
+    </div>
+</div>
+<div class="instagram-section">
+    <h3>¡Síguenos en Instagram!</h3>
+    <p>Escanea el código para conocer más de nuestra propuesta</p>
+    <img src="rrplancha3_qr.jpg" alt="QR Instagram Plancha 3" class="qr-img">
+    <a href="https://instagram.com/rrplancha3" class="insta-handle">@RRPLANCHA3</a>
+</div>
+
+</body>
+</html>
