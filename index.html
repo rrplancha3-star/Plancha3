@@ -3,188 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plancha 3 - El Dorado Country Club</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Candidatos Plancha 3 - El Dorado Country Club</title>
     <style>
-        :root {
-            --azul-oscuro: #1a3a5a;
-            --dorado: #ffcc00;
-            --dorado-hover: #e6b800;
-            --blanco: #ffffff;
-            --gris-fondo: #f0f2f5;
-        }
-
+        /* Estilos Base */
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--gris-fondo);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
             margin: 0;
-            padding: 0;
+            padding: 10px; /* Reducido para móviles */
             color: #333;
         }
 
-        /* --- ENCABEZADO --- */
         header {
             width: 100%;
-            height: auto;
-            aspect-ratio: 4 / 1.1; /* Proporción basada en Pancarta1.jpg */
-            background-image: url('Pancarta1.png');
+            height: 550px;
+            background-image: url('Banner3.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 0 40px 40px 0;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
         }
 
-        /* --- SECCIÓN LLAMADA A LA ACCIÓN --- */
-        .cta-container {
-            text-align: center;
-            padding: 30px 20px;
-            background: linear-gradient(to bottom, #fff, var(--gris-fondo));
+        header h1, header p {
+            display: none;
         }
 
         .btn-download {
             display: inline-block;
-            background-color: var(--dorado);
-            color: var(--azul-oscuro);
-            padding: 18px 40px;
+            background-color: #ffcc00;
+            color: #1a3a5a;
+            padding: 12px 25px;
             text-decoration: none;
-            font-weight: 700;
-            border-radius: 50px;
+            font-weight: bold;
+            border-radius: 30px;
             font-size: 1.1em;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .btn-download:hover {
-            transform: translateY(-3px);
-            background-color: var(--dorado-hover);
-            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.6);
-        }
-
-        /* --- CUADRÍCULA DE CANDIDATOS --- */
-        .section-title {
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             text-align: center;
-            color: var(--azul-oscuro);
-            margin: 40px 0 20px;
-            font-size: 1.8em;
-            font-weight: 700;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
         }
 
         .card {
-            background: var(--blanco);
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             overflow: hidden;
-            transition: transform 0.3s ease;
-            border-bottom: 4px solid var(--dorado);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
+            text-align: center;
         }
 
         .card img {
             width: 100%;
-            height: 320px;
+            height: 300px;
             object-fit: cover;
-            display: block;
+            background-color: #ddd;
         }
 
         .card-content {
-            padding: 20px;
-            text-align: center;
+            padding: 15px;
         }
 
         .name {
-            font-size: 1.2em;
-            font-weight: 700;
-            margin: 0 0 8px 0;
-            color: var(--azul-oscuro);
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+            color: #1a3a5a;
         }
 
         .position {
             font-size: 0.85em;
-            color: #777;
+            color: #666;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             font-weight: 600;
         }
 
-        /* --- SECCIÓN INSTAGRAM --- */
         .instagram-section {
             text-align: center;
-            margin: 60px 20px 40px;
-            padding: 40px 20px;
-            background-color: var(--azul-oscuro);
-            color: var(--blanco);
-            border-radius: 20px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .qr-img {
             width: 100%;
-            max-width: 180px;
-            margin: 20px 0;
-            border: 4px solid var(--dorado);
-            border-radius: 10px;
+            max-width: 200px;
+            height: auto;
+            margin-top: 15px;
+            border: 5px solid #1a3a5a;
+            border-radius: 15px;
         }
 
-        .insta-handle {
-            display: block;
-            color: var(--dorado);
-            font-size: 1.3em;
-            font-weight: 700;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-
-        /* --- ADAPTACIÓN MÓVIL --- */
+        /* --- AJUSTES PARA CELULARES (Pantallas menores a 600px) --- */
         @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+
             header {
-                height: 160px; /* Altura fija para que la pancarta sea legible */
-                aspect-ratio: auto;
+                height: 150px; /* Mantenemos la altura que ya tenías */
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start; /* Mueve el contenido hacia ARRIBA */
+                align-items: flex-end;       /* Mueve el contenido hacia la DERECHA */
+                background-position: center;
+            }
+
+            .btn-download {
+                width: auto;         /* El botón solo ocupa el espacio de su texto */
+                font-size: 0.7em;    /* Tamaño de letra más pequeño */
+                padding: 6px 12px;   /* Menos relleno para reducir el tamaño total */
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                margin-top: 5px;     /* Pequeño margen superior para que no pegue al borde */
+                margin-right: 5px;   /* Pequeño margen derecho */
             }
 
             .container {
-                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-                gap: 15px;
+                grid-template-columns: 1fr; 
                 padding: 10px;
             }
 
             .card img {
-                height: 220px;
+                height: 400px; 
             }
 
-            .btn-download {
-                width: 85%;
-                font-size: 0.9em;
-                padding: 15px;
+            .instagram-section {
+                margin-top: 30px;
+                padding: 20px 10px;
             }
         }
     </style>
 </head>
 <body>
 
-<header></header>
-
-<div class="cta-container">
-    <a href="propuesta-gestion.pdf" class="btn-download" download>
-        Descargar Propuesta de Gestión
-    </a>
-</div>
-
-<h2 class="section-title">Nuestro Equipo</h2>
+<header>
+    <div class="btn-container">
+        <a href="propuesta-gestion.pdf" class="btn-download" download>
+            📄 Descargar Propuesta
+        </a>
+    </div>
+</header>
 
 <div class="container">
     <div class="card">
@@ -332,12 +307,8 @@
 </div>
 
 </body>
+
 </html>
-
-
-
-
-
 
 
 
